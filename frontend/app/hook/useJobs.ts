@@ -140,7 +140,7 @@ export default function useJobs(selectedFilters: Record<string, any>, page: numb
                     else if (value !== undefined) params.append(key, String(value));
                 });
 
-                const res = await fetch(`http://localhost:4000/api/jobs?${params.toString()}`);
+                const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/jobs?${params.toString()}`);
 
                 if (!res.ok) throw new Error("Backend offline");
 
