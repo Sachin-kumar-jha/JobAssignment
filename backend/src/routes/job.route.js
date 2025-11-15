@@ -1,7 +1,7 @@
 import express from "express"
 const router = express.Router();
 
-import {Job} from "../model/Job.js"
+import { Job } from "../model/Job.js"
 // GET jobs with filters & pagination
 // Example query: /api/jobs?page=1&limit=10&location=Delhi&experience=2-4%20yrs&fullStack=true
 router.get('/', async (req, res) => {
